@@ -1,0 +1,13 @@
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+#    hibernate:
+#      naming:
+#        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  datasource:
+    url: jdbc:mysql://localhost:3306/pizza
+    username: pizza
+    password: piz009asdfasdfasdfGGGGGG
+    driverClassName: com.mysql.jdbc.Driver
+server:
+  port: 58080
