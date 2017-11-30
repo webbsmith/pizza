@@ -2,10 +2,8 @@ package swe3313.group5.pizza;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -19,4 +17,6 @@ public class Customer {
     @ManyToOne
     @JoinColumn(name = "address_id")
     private Address address;
+    @OneToMany(mappedBy = "customer")
+    private List<CustomerOrder> orders;
 }

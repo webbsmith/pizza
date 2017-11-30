@@ -83,7 +83,6 @@ CREATE TABLE pizza.customer_order_item (
   FOREIGN KEY (order_item_id) REFERENCES order_item (id)
 );
 
-
 INSERT INTO pizza.address (house_number, street, city, state, postal_code, subdivision, closest_major_intersection, delivery_notes)
 VALUES
   ('55', 'Texas St. NE', 'Kennesaw', 'GA', '30144', 'Darby Downs', 'Frey Rd. and Busbee Pkwy.',
@@ -101,15 +100,15 @@ INSERT INTO pizza.customer (first_name, last_name, phone_number, card_type, addr
   ('Robert', 'Po', '(770) 129-0912', 'None', 3);
 
 INSERT INTO pizza.customer_order (customer_id, payment_method, amount, notes, time) VALUES
-  (1, 'Credit Card - Visa', 19.09, 'One large supreme pizza, and a 2 liter coke', NOW() - 24 * 3.0),
+  (1, 'Credit Card - Visa', 19.09, 'One large supreme pizza, and a 2 liter coke', NOW()),
   (1, 'Credit Card - Visa', 34.12, 'One large supreme pizza, one medium pepperoni, and a 2 liter coke',
-   NOW() - 24 * 3.0 + 1.0),
-  (2, 'Credit Card - Visa', 19.09, 'One large supreme pizza, and a 2 liter coke', NOW() - 24 * 3.0 + 1.0),
-  (3, 'Credit Card - Master Card', 3.02, 'One large sweet tea', NOW() - 24 * 2.0 + 1.0),
-  (4, 'Credit Card - Master Card', 90.02, '10 large cheese pizza, one apple pie', now() - 24 * 1.9 + 1.0),
-  (5, 'Cash', 9.19, '1 small pizza with only cheese, olives, anchovies, and NO marinara', NOW() - 24 * 1.9 + 1.0),
-  (5, 'Cash', 9.19, '1 small pizza with only cheese, olives, anchovies, and NO marinara', NOW() - 24 + 1.0),
-  (5, 'Check', 9.19, '1 small pizza with only cheese, olives, anchovies, and NO marinara', NOW() - 24 + 3.0);
+   NOW()),
+  (2, 'Credit Card - Visa', 19.09, 'One large supreme pizza, and a 2 liter coke', NOW()),
+  (3, 'Credit Card - Master Card', 3.02, 'One large sweet tea', NOW()),
+  (4, 'Credit Card - Master Card', 90.02, '10 large cheese pizza, one apple pie', NOW()),
+  (5, 'Cash', 9.19, '1 small pizza with only cheese, olives, anchovies, and NO marinara', NOW()),
+  (5, 'Cash', 9.19, '1 small pizza with only cheese, olives, anchovies, and NO marinara', NOW()),
+  (5, 'Check', 9.19, '1 small pizza with only cheese, olives, anchovies, and NO marinara', NOW());
 
 INSERT INTO pizza.menu_item (name, amount) VALUES
   ('Pizza - Small', 8.50),
