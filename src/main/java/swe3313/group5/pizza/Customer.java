@@ -9,12 +9,13 @@ import java.util.List;
 @Data
 public class Customer {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String firstName;
     private String lastName;
     private String phoneNumber;
     private String cardType;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "address_id")
     private Address address;
     @OneToMany(mappedBy = "customer")

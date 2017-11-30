@@ -10,6 +10,7 @@ import java.util.List;
 @Data
 public class OrderItem {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @OneToOne
     @JoinColumn(name = "menu_item_id")

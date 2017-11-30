@@ -12,6 +12,7 @@ import java.util.List;
 @ToString(exclude = "customer")
 public class CustomerOrder {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @ManyToOne
     @JoinColumn(name = "customer_id")
