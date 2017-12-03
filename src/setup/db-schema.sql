@@ -120,7 +120,6 @@ INSERT INTO pizza.menu_item (name, amount) VALUES
   ('Deep Dish Pizza - Small', 10.00),
   ('Deep Dish Pizza - Medium', 14.00),
   ('Deep Dish Pizza - Large', 18.00),
-  ('Deep Dish Pizza - Large', 18.00),
   ('Salad', 5.00),
   ('Soda', 2.00),
   ('Water', 0.00),
@@ -128,6 +127,30 @@ INSERT INTO pizza.menu_item (name, amount) VALUES
   ('Wine', 5.00),
   ('Slice of Apple Pie', 3.00),
   ('Peanut Butter Brownie', 3.00);
+
+/* Toppings as regular menu items since the add_on feature is not implemented */
+INSERT INTO pizza.menu_item (name, amount) VALUES
+  ('Topping: Pepperoni', 1.00),
+    ('Topping: Anchovies', 1.00),
+    ('Topping: Extra Cheese', 1.00),
+    ('Topping: Meatballs', 2.00),
+    ('Topping: Onions', 1.00),
+    ('Topping: Italian Sausage', 2.00),
+    ('Topping: Black Olives', 1.00),
+    ('Topping: Green Olives', 1.00),
+    ('Topping: Hot Peppers', 1.00),
+    ('Topping: Feta Cheese', 1.00),
+    ('Topping: Fresh Spinach', 1.00),
+    ('Topping: Ham', 1.00),
+    ('Topping: Pineapple', 1.00),
+    ('Topping: Tomatoes', 1.00),
+    ('Topping: Ricotta Cheese', 1.00),
+    ('Topping: Gluten Free', 3.00),
+    ('Topping: Ranch Dressing', 0.50),
+    ('Topping: No Cheese', 0.00),
+    ('Topping: No Sauce', 0.00),
+    ('Topping: No Sauce', 0.00),
+    ('Topping: Ranch Dressing', 0.50);
 
 INSERT INTO pizza.menu_add_on (name, amount) VALUES
   ('Pepperoni', 1.00),
