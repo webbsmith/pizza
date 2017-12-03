@@ -16,7 +16,7 @@ CREATE TABLE pizza.customer (
   id           INT PRIMARY KEY AUTO_INCREMENT,
   first_name   VARCHAR(255),
   last_name    VARCHAR(255),
-  phone_number VARCHAR(255),
+  phone_number VARCHAR(255)
   card_type    VARCHAR(255),
   address_id   INT,
   INDEX address_index (address_id),
